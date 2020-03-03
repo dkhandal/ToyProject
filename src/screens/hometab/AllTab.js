@@ -4,7 +4,6 @@ import { Text, View, StatusBar, ActivityIndicator, ScrollView,StyleSheet,Image} 
 import { Card } from 'react-native-paper'
 import { theme } from '../../core/theme';
 import * as ConstantsClass from '../../util/Constants';
-// import * as axios from 'react-native-axios';
 import axiosAPI from '../../util/axiosConfig';
 
 export default class AllTab extends React.Component {
@@ -44,7 +43,7 @@ export default class AllTab extends React.Component {
 
     componentDidMount() {
 
-		// this.goForAxios();
+		this.goForAxios();
     }
 
 
@@ -56,15 +55,15 @@ export default class AllTab extends React.Component {
   	console.log('Loading state ' + loading);
 
   	
-  // 		if (this.state.loading) {
-  //             return (
-		// 	        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-	 //                    <ActivityIndicator size="large" color="{theme.colors.surface}" />
-	 //                    <Text>Fetching Data</Text>
-	 //                </View> 
-  //             );
-  //       }
-		// if(this.state && this.state.axiosData){        
+  		if (this.state.loading) {
+              return (
+			        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+	                    <ActivityIndicator size="large" color="{theme.colors.surface}" />
+	                    <Text>Fetching Data</Text>
+	                </View> 
+              );
+        }
+		if(this.state && this.state.axiosData){        
 	  		return (
 		    	<>
 				    <StatusBar
@@ -90,9 +89,9 @@ export default class AllTab extends React.Component {
 
 		       </>
 		    );
-	  	// }else{
-	  	// 	return null;
-	  	// }
+	  	}else{
+	  		return null;
+	  	}
 
   } // render
 } // AllTab class
