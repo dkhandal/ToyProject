@@ -58,12 +58,12 @@ const Router = createStackNavigator(
         // headerTransparent:  true,
         headerLeft:  () => (
             <TouchableOpacity style={styles.iconLeftArrow}>
-              <Icon name='arrow-left' iconStyle={styles.icon77} color='#ffffff'/>
+              <Icon name='arrow-left' size={24} iconStyle={styles.icon77} color='#ffffff'/>
             </TouchableOpacity>
         ),
         headerRight:  () => (
             <TouchableOpacity style={styles.iconRightSearch}>
-              <Icon name='search' iconStyle={styles.iconactionsearch24Px} color='#ffffff'/>
+              <Icon name='search' size={24}  iconStyle={styles.iconactionsearch24Px} color='#ffffff'/>
             </TouchableOpacity>
         )
       }

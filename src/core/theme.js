@@ -9,6 +9,7 @@ export const theme = {
     secondary: '#FFFFFF',
     error: '#f13a59',
     buttonBorder: '#D5D5D5',
-    success: "#00B386"
+    success: "#00B386",
+    transparent: 'transparent'
   }
 };

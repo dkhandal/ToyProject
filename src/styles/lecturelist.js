@@ -31,13 +31,13 @@ container: {
 	  color: "#ffffff"
 	},
 	icon77:{
-	  width: 16,
-	  height: 16,
+	  width: 24,
+	  height: 24,
 	  backgroundColor: "#ffffff"
 	},
 	iconactionsearch24Px: {
-	  width: 17.5,
-	  height: 17.5,
+	  width: 24,
+	  height: 24,
 	  backgroundColor: "#d1d9da"
 	}
 });

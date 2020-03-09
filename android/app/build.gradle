@@ -80,6 +80,10 @@ import com.android.build.OutputFile
 project.ext.react = [
     entryFile: "index.js",
     enableHermes: false,  // clean and rebuild if changing
+    // whether to bundle JS and assets in debug mode
+    bundleInDebug: false,
+    // whether to bundle JS and assets in release mode
+    bundleInRelease: true
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
@@ -97,7 +101,7 @@ def enableSeparateBuildPerCPUArchitecture = false
 /**
  * Run Proguard to shrink the Java bytecode in release builds.
  */
-def enableProguardInReleaseBuilds = false
+def enableProguardInReleaseBuilds = true
 
 /**
  * The preferred build flavor of JavaScriptCore.
@@ -151,19 +155,32 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+        release {
+            storeFile file(MYAPP_RELEASE_STORE_FILE)
+            storePassword MYAPP_RELEASE_STORE_PASSWORD
+            keyAlias MYAPP_RELEASE_KEY_ALIAS
+            keyPassword MYAPP_RELEASE_KEY_PASSWORD
+        }        
     }
     buildTypes {
         debug {
+            applicationIdSuffix ".debug"
             signingConfig signingConfigs.debug
+            resValue "string", "app_name", "@string/app_name_debug"
         }
         release {
             // Caution! In production, you need to generate your own keystore file.
             // see https://facebook.github.io/react-native/docs/signed-apk-android.
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            resValue "string", "app_name", "@string/app_name_release"
         }
     }
+    // This is important, it will run lint checks but won't abort build
+    lintOptions {
+          abortOnError false
+    }    
     // applicationVariants are e.g. debug, release
     applicationVariants.all { variant ->
         variant.outputs.each { output ->

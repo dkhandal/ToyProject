@@ -17,6 +17,7 @@ instance.defaults.headers.post['Content-Type'] = 'application/json';
 // Also add/ configure interceptors && all the other cool stuff
 instance.interceptors.request.use(request => {
     // console.log(request);
+    console.log(request.url);
     // Edit request config
     return request;
 }, error => {

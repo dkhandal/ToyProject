@@ -1,22 +1,25 @@
 import React, { Component } from 'react';
 //import react in our code.
-import { Text, View, StatusBar, ActivityIndicator, ScrollView,StyleSheet,Image} from 'react-native';
-import { Card } from 'react-native-paper'
+import { Text, View, StatusBar, ActivityIndicator, ScrollView,StyleSheet,Image,TouchableOpacity,Alert,ImageBackground} from 'react-native';
 import { theme } from '../../core/theme';
 import * as ConstantsClass from '../../util/Constants';
 import axiosAPI from '../../util/axiosConfig';
+import styles from '../../styles/alltab';
 
 export default class AllTab extends React.Component {
 
     constructor(props) {
         super(props);
 
-        const { goForAxios, axiosData, loading } = props
+        // console.log(this.props.navigation.state);
 
-        console.log(ConstantsClass.API_LECTURE_LIST);
+        const { goForAxios, axiosData, loading, navigation } = props
+
+        // console.log(ConstantsClass.API_LECTURE_LIST);
            this.state = {
+           	  navigation: this.props.navigation,
            	  loading: true,
-		      axiosData: []
+		      axiosData: {}
 		   }
 
     }
@@ -27,14 +30,23 @@ export default class AllTab extends React.Component {
         })
 		axiosAPI.get(ConstantsClass.API_LECTURE_LIST)
 		  .then(response => {
-		  		console.log('getting data from axios', response.data);
+		  		// console.log('getting data from axios', response.data);
 
 				setTimeout(() => {
 			    	this.setState({
 	                        loading: false,
 	                        axiosData: response.data
 	                    })
+
+					// If any error comes from server in response then show with alert message
+					if(this.state.axiosData && this.state.axiosData.meta.errCode != 0){
+						console.log('Error Code', this.state.axiosData.meta.errCode);
+						console.log('Error Message Received: ', this.state.axiosData.meta.errMsg);
+						this.sendAlertMessage('Server Error',this.state.axiosData.meta.errMsg);
+					}
+
 			    }, 1000)
+
 		  })
 		  .catch(error => {
 		    console.log(error);
@@ -46,13 +58,26 @@ export default class AllTab extends React.Component {
 		this.goForAxios();
     }
 
+    sendAlertMessage(title,message) {
 
+        Alert.alert(
+          //title
+          title,
+          //body
+          message,
+          [
+            {text: 'OK', onPress: () => console.log('Cancel on error message'), style: 'cancel'},
+          ],
+          { cancelable: false }
+          //clicking out side of alert will not cancel
+        );
+    }
 
 
   render() {
-  	const { axiosData,loading } = this.state;
-  	console.log('axiosData ' + axiosData);
-  	console.log('Loading state ' + loading);
+  	const { axiosData,loading,navigation } = this.state;
+  	// console.log('axiosData ' + JSON.stringify(axiosData));
+  	// console.log('Loading state ' + loading);
 
   	
   		if (this.state.loading) {
@@ -78,12 +103,16 @@ export default class AllTab extends React.Component {
 			            networkActivityIndicatorVisible={true}
 			      />
 			        <ScrollView style={styles.container}>
-				        <View style={{ backgroundColor: '#ffffff' }}>
-				          <SingleRow style={{ backgroundColor: '#ffffff' }}/>
-				          <SingleRow />
-				          <SingleRow />
-				          <SingleRow />
-				          <SingleRow />
+				        <View >
+					        {
+		                        this.state.axiosData.data.content.map((item, key) => {
+		                            return (
+				          					<SingleRowLectureList navigator={navigation} data={item} key={key}/>
+		                            	);
+		                        })
+	                    	}
+
+
 				        </View>
 				    </ScrollView>
 
@@ -96,155 +125,93 @@ export default class AllTab extends React.Component {
   } // render
 } // AllTab class
 
-const styles = StyleSheet.create({
-    container: {
-        backgroundColor: '#ffffff',
-        // margin: 10
-    },
-    whiteText: {
-        color: '#FFFFFF',
-        fontSize: 20
-    },
-   s1: {
-	  width: 110,
-	  height: 26,
-	  fontFamily: "Roboto",
-	  fontSize: 20,
-	  fontWeight: "bold",
-	  fontStyle: "normal",
-	  lineHeight: 26,
-	  letterSpacing: 0,
-	  textAlign: "left",
-	  color: "#212121"
-	},
-	btn1Button: {
-	  width: 130,
-	  height: 20,
-	  fontFamily: "NotoSansCJKkr",
-	  fontSize: 14,
-	  fontWeight: "500",
-	  fontStyle: "normal",
-	  lineHeight: 22,
-	  letterSpacing: 0.98,
-	  textAlign: "right",
-	  color: "#fc5356"
-	},
-	bg: {
-	  width: 232,
-	  height: 310,
-	  borderRadius: 6,
-	  backgroundColor: "#ffffff",
-	  marginRight: 20,
-	  borderWidth: 0.5,
-      borderColor: '#a3a3a3',
-      alignItems: 'center'
-	}
-});
 
-class SingleRow extends React.Component {
+
+class SingleRowLectureList extends React.Component {
   constructor(props) {
     super(props);
-    const slides = [
-      {
-        key: '11 MB',
-        text: 'FREE ',
-        title: 'Mobile ',
-        uri: 'https://raw.githubusercontent.com/AboutReact/sampleresource/master/old_logo.png',
-        backgroundColor: '#ffffff',
-      },
-      {
-        key: '52 MB',
-        title: 'Flight ',
-        uri: 'https://raw.githubusercontent.com/AboutReact/sampleresource/master/old_logo.png',
-        backgroundColor: '#febe29',
-      },
-      {
-        key: '14 MB',
-        text: 'FREE',
-        title: 'Great ',
-        uri: 'https://raw.githubusercontent.com/AboutReact/sampleresource/master/old_logo.png',
-        backgroundColor: '#22bcb5',
-      },
-      {
-        key: '45 MB',
-        title: 'Best ',
-        uri: 'https://raw.githubusercontent.com/AboutReact/sampleresource/master/old_logo.png',
-        backgroundColor: '#3395ff',
-      },
-      {
-        key: '33 MB',
-        title: 'Bus ',
-        text: 'FREE',
-        uri: 'https://raw.githubusercontent.com/AboutReact/sampleresource/master/old_logo.png',
-        backgroundColor: '#f6437b',
-      },
-      {
-        key: '77 MB',
-        title: 'Train ',
-        uri: 'https://raw.githubusercontent.com/AboutReact/sampleresource/master/old_logo.png',
-        backgroundColor: '#febe29',
-      },
-    ];
-    global.slides = slides;
+
+    // console.log(props);
   }
-  onPressLearnMore() {
-    alert('Hello');
+  onPressViewAll() {
+    alert('View All');
   }
+	openLectureDetailBasic() {
+	    console.log('came into openLectureDetailBasic');
+	    this.props.navigator.navigate('LectureDetailBasic');
+	}
   render() {
+  	// console.log(global.slides);
+  	// console.log(this.props);
     return (
       <View style={{ backgroundColor: '#ffffff', padding: 20 }}>
          <View
             style={{ flexDirection: 'row', justifyContent: 'space-between', backgroundColor: '#ffffff',marginBottom: 10 }}>
             <Text style={styles.s1}>
-              Category 1
+              {this.props.data.category.name}
             </Text>
-            <Text style={styles.btn1Button} onPress={() => alert('View All')}>
+            <Text style={styles.btn1Button} onPress={() => this.onPressViewAll()}>
               View All
             </Text>
           </View>
-        <Card>
 
-          <View style={{ flexDirection: 'row', width: '100%', backgroundColor: '#ffffff' }}>
-            <ScrollView
-              horizontal={true}
-              showsHorizontalScrollIndicator={false}>
-              {global.slides.map((item, key) => (
-                <View style={styles.bg} key={key}>
-                  <Image
-                    source={{
-                      uri: item.uri,
-                    }}
-                    style={{ width: 70, height: 70, margin: 10 }}
-                  />
-                  <View
-                    style={{
-                      flexDirection: 'row',
-                      justifyContent: 'space-between',
-                    }}>
-                    <Text
-                      style={{ color: '#494949', fontWeight: '200' }}
-                      onPress={() => {
-                        alert('Title ' + item.title + ' Clicked');
-                      }}>
-                      {item.title}
-                    </Text>
-                    <Text style={{ color: '#228B22' }}>⋮</Text>
-                  </View>
-                  <View
-                    style={{
-                      flexDirection: 'row',
-                      justifyContent: 'space-between',
-                    }}>
-                    <Text style={{ color: '#606070', fontWeight: '200' }}>
-                      {item.key}
-                    </Text>
-                    <Text style={{ color: '#228B22' }}>{item.text}</Text>
-                  </View>
-                </View>
-              ))}
-            </ScrollView>
-          </View>
-        </Card>
+	         <View style={{ flexDirection: 'row', width: '100%', backgroundColor: '#ffffff' }}>
+	            <ScrollView
+	              horizontal={true}
+	              showsHorizontalScrollIndicator={false}>
+	              {this.props.data.degrees.map((item, key) => (
+	              	<TouchableOpacity onPress={this.openLectureDetailBasic.bind(this)} key={key} >
+	                <View style={{
+	                		  width: 232,
+							  height: item.thumbnail ? 310 : 170,
+							  borderRadius: 10,
+							  backgroundColor: "#ffffff",
+							  marginRight: 20,
+							  borderWidth: 0.5,
+						      borderColor: '#a3a3a3'
+	                }} key={key}>
+		                {item.thumbnail ? 
+		                	(
+		                		<View>
+			            		    <ImageBackground style={styles.thumnail} source={item.thumbnail ? {uri: item.thumbnail} : require('../../assets/thumnail.png')} >
+				                      <View style={styles.lession156}>
+								        <Text style={styles.ct}>{item.lessonCount} lessons</Text>
+								      </View>
+						            </ImageBackground>
+							      
+							  	</View>
+		                	)
+		                	: 
+		                	(
+		                		null
+		                	)
+		                }
+
+	                  <Text style={styles.s2} >{item.name} </Text>
+	                  <Text style={styles.b3} >{!item.thumbnail ? item.lessonCount + ' lessons' : ''}</Text>
+	                  <Text style={styles.b3} >{item.levels[0].text}</Text>
+	                  <View style={styles.byContainer}>
+	                  		<Text style={styles.eB3By} >By</Text>
+	                  		<Text style={styles.b2} >{item.teacher.name.fullName} </Text>
+	                  </View>
+	                  {item.goods.price != 0  ? (
+		                  <View style={styles.priceContainer}>
+		                  		<Text style={styles.eB3} >{item.goods.currency.key}</Text>
+		                  		<Text style={styles.eH5} >{item.goods.paymentPrice}</Text>
+								<Text style={styles.eB1} >{item.goods.discountPrice != 0 ? item.goods.price : ''}</Text>
+		                  </View>
+	                  ) : (
+		                  <View style={styles.priceContainer}>
+		                  		<Text style={styles.eH5} >Free</Text>
+		                  </View>	
+	                  )
+	              	}
+ 	                  
+	                </View>
+	                </TouchableOpacity>
+	              ))}
+	            </ScrollView>
+	         </View>
       </View>
     );
   }
