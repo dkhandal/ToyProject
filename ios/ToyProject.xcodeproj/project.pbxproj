@@ -45,6 +45,15 @@
 		5400D9892415AF4F0079A114 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5400D9792415AF4F0079A114 /* Octicons.ttf */; };
 		5400D98A2415AF4F0079A114 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5400D97A2415AF4F0079A114 /* MaterialIcons.ttf */; };
 		5400D98B2415AF4F0079A114 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5400D97B2415AF4F0079A114 /* FontAwesome5_Brands.ttf */; };
+		549E741724162BBD009C8ABB /* NotoSansCJKkr-DemiLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 549E740E24162BAF009C8ABB /* NotoSansCJKkr-DemiLight.otf */; };
+		549E741824162BBD009C8ABB /* NotoSansCJKkr-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 549E740F24162BB1009C8ABB /* NotoSansCJKkr-Light.otf */; };
+		549E741924162BBD009C8ABB /* NotoSansCJKkr-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 549E741024162BB2009C8ABB /* NotoSansCJKkr-Medium.otf */; };
+		549E741A24162BBD009C8ABB /* NotoSansCJKkr-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 549E741124162BB4009C8ABB /* NotoSansCJKkr-Black.otf */; };
+		549E741B24162BBD009C8ABB /* NotoSansCJKkr-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 549E741224162BB5009C8ABB /* NotoSansCJKkr-Thin.otf */; };
+		549E741C24162BBD009C8ABB /* NotoSansCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 549E741324162BB8009C8ABB /* NotoSansCJKkr-Regular.otf */; };
+		549E741D24162BBD009C8ABB /* NotoSansMonoCJKkr-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 549E741424162BB9009C8ABB /* NotoSansMonoCJKkr-Bold.otf */; };
+		549E741E24162BBD009C8ABB /* NotoSansCJKkr-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 549E741524162BBB009C8ABB /* NotoSansCJKkr-Bold.otf */; };
+		549E741F24162BBD009C8ABB /* NotoSansMonoCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 549E741624162BBC009C8ABB /* NotoSansMonoCJKkr-Regular.otf */; };
 		B5D50B1FB15DAD06D6A6119F /* libPods-ToyProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32871D685331965E9B1F0166 /* libPods-ToyProject.a */; };
 		B8C04CED629813B8977A025B /* libPods-ToyProject-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C50C26ECDD569ADC74FAA29 /* libPods-ToyProject-tvOSTests.a */; };
 		E7CF6220330143D7501EE704 /* libPods-ToyProject-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3624E87EA29A03984055DF /* libPods-ToyProject-tvOS.a */; };
@@ -111,6 +120,15 @@
 		5400D9792415AF4F0079A114 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Octicons.ttf; path = "../../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		5400D97A2415AF4F0079A114 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialIcons.ttf; path = "../../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		5400D97B2415AF4F0079A114 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome5_Brands.ttf; path = "../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
+		549E740E24162BAF009C8ABB /* NotoSansCJKkr-DemiLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-DemiLight.otf"; sourceTree = "<group>"; };
+		549E740F24162BB1009C8ABB /* NotoSansCJKkr-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Light.otf"; sourceTree = "<group>"; };
+		549E741024162BB2009C8ABB /* NotoSansCJKkr-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Medium.otf"; sourceTree = "<group>"; };
+		549E741124162BB4009C8ABB /* NotoSansCJKkr-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Black.otf"; sourceTree = "<group>"; };
+		549E741224162BB5009C8ABB /* NotoSansCJKkr-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Thin.otf"; sourceTree = "<group>"; };
+		549E741324162BB8009C8ABB /* NotoSansCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Regular.otf"; sourceTree = "<group>"; };
+		549E741424162BB9009C8ABB /* NotoSansMonoCJKkr-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansMonoCJKkr-Bold.otf"; sourceTree = "<group>"; };
+		549E741524162BBB009C8ABB /* NotoSansCJKkr-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Bold.otf"; sourceTree = "<group>"; };
+		549E741624162BBC009C8ABB /* NotoSansMonoCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansMonoCJKkr-Regular.otf"; sourceTree = "<group>"; };
 		580EFDE6F4F9BE88E50B8A12 /* Pods-ToyProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToyProject.release.xcconfig"; path = "Target Support Files/Pods-ToyProject/Pods-ToyProject.release.xcconfig"; sourceTree = "<group>"; };
 		5AA1CDB7E4E75CACD18A06ED /* Pods-ToyProject-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToyProject-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-ToyProject-tvOSTests/Pods-ToyProject-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		5C50C26ECDD569ADC74FAA29 /* libPods-ToyProject-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ToyProject-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -223,6 +241,15 @@
 		5400D9532415A6570079A114 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				549E741124162BB4009C8ABB /* NotoSansCJKkr-Black.otf */,
+				549E741524162BBB009C8ABB /* NotoSansCJKkr-Bold.otf */,
+				549E740E24162BAF009C8ABB /* NotoSansCJKkr-DemiLight.otf */,
+				549E740F24162BB1009C8ABB /* NotoSansCJKkr-Light.otf */,
+				549E741024162BB2009C8ABB /* NotoSansCJKkr-Medium.otf */,
+				549E741324162BB8009C8ABB /* NotoSansCJKkr-Regular.otf */,
+				549E741224162BB5009C8ABB /* NotoSansCJKkr-Thin.otf */,
+				549E741424162BB9009C8ABB /* NotoSansMonoCJKkr-Bold.otf */,
+				549E741624162BBC009C8ABB /* NotoSansMonoCJKkr-Regular.otf */,
 				5400D96F2415AF4E0079A114 /* AntDesign.ttf */,
 				5400D9742415AF4E0079A114 /* Entypo.ttf */,
 				5400D9712415AF4E0079A114 /* EvilIcons.ttf */,
@@ -430,20 +457,25 @@
 			files = (
 				5400D9822415AF4F0079A114 /* FontAwesome5_Solid.ttf in Resources */,
 				5400D9622415A68C0079A114 /* Roboto-Medium.ttf in Resources */,
+				549E741A24162BBD009C8ABB /* NotoSansCJKkr-Black.otf in Resources */,
 				5400D9852415AF4F0079A114 /* Ionicons.ttf in Resources */,
 				5400D96A2415A68C0079A114 /* Roboto-Bold.ttf in Resources */,
 				5400D9682415A68C0079A114 /* Roboto-LightItalic.ttf in Resources */,
 				5400D9882415AF4F0079A114 /* SimpleLineIcons.ttf in Resources */,
 				5400D9612415A68C0079A114 /* Roboto-Thin.ttf in Resources */,
 				5400D9832415AF4F0079A114 /* Foundation.ttf in Resources */,
+				549E741F24162BBD009C8ABB /* NotoSansMonoCJKkr-Regular.otf in Resources */,
+				549E741924162BBD009C8ABB /* NotoSansCJKkr-Medium.otf in Resources */,
 				5400D9862415AF4F0079A114 /* Feather.ttf in Resources */,
 				5400D98B2415AF4F0079A114 /* FontAwesome5_Brands.ttf in Resources */,
 				5400D9602415A68C0079A114 /* Roboto-ThinItalic.ttf in Resources */,
+				549E741C24162BBD009C8ABB /* NotoSansCJKkr-Regular.otf in Resources */,
 				5400D9892415AF4F0079A114 /* Octicons.ttf in Resources */,
 				5400D9692415A68C0079A114 /* Roboto-MediumItalic.ttf in Resources */,
 				5400D9872415AF4F0079A114 /* MaterialCommunityIcons.ttf in Resources */,
 				5400D97F2415AF4F0079A114 /* AntDesign.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				549E741E24162BBD009C8ABB /* NotoSansCJKkr-Bold.otf in Resources */,
 				5400D97C2415AF4F0079A114 /* Zocial.ttf in Resources */,
 				5400D9642415A68C0079A114 /* Roboto-Italic.ttf in Resources */,
 				5400D9802415AF4F0079A114 /* FontAwesome5_Regular.ttf in Resources */,
@@ -451,11 +483,15 @@
 				5400D96B2415A68C0079A114 /* Roboto-Regular.ttf in Resources */,
 				5400D9842415AF4F0079A114 /* Entypo.ttf in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				549E741D24162BBD009C8ABB /* NotoSansMonoCJKkr-Bold.otf in Resources */,
 				5400D9812415AF4F0079A114 /* EvilIcons.ttf in Resources */,
 				5400D9632415A68C0079A114 /* Roboto-Black.ttf in Resources */,
 				5400D9652415A68C0079A114 /* Roboto-BlackItalic.ttf in Resources */,
 				5400D9672415A68C0079A114 /* Roboto-BoldItalic.ttf in Resources */,
 				5400D97D2415AF4F0079A114 /* Fontisto.ttf in Resources */,
+				549E741B24162BBD009C8ABB /* NotoSansCJKkr-Thin.otf in Resources */,
+				549E741724162BBD009C8ABB /* NotoSansCJKkr-DemiLight.otf in Resources */,
+				549E741824162BBD009C8ABB /* NotoSansCJKkr-Light.otf in Resources */,
 				5400D9662415A68C0079A114 /* Roboto-Light.ttf in Resources */,
 				5400D97E2415AF4F0079A114 /* FontAwesome.ttf in Resources */,
 			);

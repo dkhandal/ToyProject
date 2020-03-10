@@ -37,7 +37,7 @@ export default StyleSheet.create({
 	btn1Button: {
 	  width: 130,
 	  height: 20,
-	  fontFamily: "NotoSansCJKkr",
+	  fontFamily: "NotoSansCJKkr-Regular",
 	  fontSize: 14,
 	  fontWeight: "500",
 	  fontStyle: "normal",
