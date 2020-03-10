@@ -28,17 +28,10 @@ const TabScreenLectureList = createMaterialTopTabNavigator(
     animationEnabled: true,
     tabBarOptions: {
       activeTintColor: '#FFFFFF',
-      inactiveTintColor: '#F8F8F8',
-      style: {
-        backgroundColor: '#313d4b',
-      },
-      labelStyle: {
-        textAlign: 'center',
-      },
-      indicatorStyle: {
-        borderBottomColor: '#FFFFFF',
-        borderBottomWidth: 2,
-      },
+      inactiveTintColor: '#C0C5CA',
+      style: styles.tabBg,
+      labelStyle: styles.b2TabItem,
+      indicatorStyle: styles.tabSelectionOn,
       upperCaseLabel: false
     },
   }
@@ -57,13 +50,13 @@ const Router = createStackNavigator(
         headerTitleStyle: styles.h8PageTitle,
         // headerTransparent:  true,
         headerLeft:  () => (
-            <TouchableOpacity style={styles.iconLeftArrow}>
-              <Icon name='arrow-left' size={24} iconStyle={styles.icon77} color='#ffffff'/>
+            <TouchableOpacity style={styles.iconLeftArrow155}>
+              <Icon name='arrow-left' size={16} style={styles.icon77}/>
             </TouchableOpacity>
         ),
         headerRight:  () => (
-            <TouchableOpacity style={styles.iconRightSearch}>
-              <Icon name='search' size={24}  iconStyle={styles.iconactionsearch24Px} color='#ffffff'/>
+            <TouchableOpacity style={styles.iconRightSearchrectangle3}>
+              <Icon name='search' size={16}  style={styles.iconactionsearch24Px}/>
             </TouchableOpacity>
         )
       }

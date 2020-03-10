@@ -11,7 +11,7 @@ export default StyleSheet.create({
    s1: {
 	  width: 120,
 	  height: 26,
-	  fontFamily: "Roboto",
+	  fontFamily: "Roboto-Bold",
 	  fontSize: 20,
 	  fontWeight: "bold",
 	  fontStyle: "normal",
@@ -35,9 +35,9 @@ export default StyleSheet.create({
 	  marginTop: 16
 	},
 	btn1Button: {
-	  width: 130,
+	  width: 60,
 	  height: 20,
-	  fontFamily: "NotoSansCJKkr-Regular",
+	  fontFamily: "NotoSansCJKkr-Medium",
 	  fontSize: 14,
 	  fontWeight: "500",
 	  fontStyle: "normal",
