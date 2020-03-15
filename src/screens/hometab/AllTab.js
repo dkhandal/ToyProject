@@ -163,12 +163,17 @@ class SingleRowLectureList extends React.Component {
 	              	<TouchableOpacity onPress={this.openLectureDetailBasic.bind(this)} key={key} >
 	                <View style={{
 	                		  width: 232,
-							  height: item.thumbnail ? 310 : 170,
+							  height: item.thumbnail ? 310 : 201,
 							  borderRadius: 10,
 							  backgroundColor: "#ffffff",
 							  marginRight: 20,
 							  borderWidth: 0.5,
-						      borderColor: '#a3a3a3'
+						      borderColor: '#a3a3a3',
+						      borderBottomWidth: 2,
+						      shadowColor: '#000000',
+						      shadowOffset: { width: 0, height: 2 },
+						      shadowOpacity: 0.3,
+						      shadowRadius: 10
 	                }} key={key}>
 		                {item.thumbnail ? 
 		                	(
@@ -187,12 +192,20 @@ class SingleRowLectureList extends React.Component {
 		                	)
 		                }
 
-	                  <Text style={styles.s2} >{item.name} </Text>
-	                  <Text style={styles.b3} >{!item.thumbnail ? item.lessonCount + ' lessons' : ''}</Text>
+	                  <Text style={styles.s2} >{item.name}</Text>
+		              {!item.thumbnail ? 
+			               (
+		                  		<Text style={styles.b3lession} >{!item.thumbnail ? item.lessonCount + ' lessons' : ''}</Text>
+			                )
+			                : 
+		                	(
+		                		null
+		                	)
+		                }
 	                  <Text style={styles.b3} >{item.levels[0].text}</Text>
 	                  <View style={styles.byContainer}>
 	                  		<Text style={styles.eB3By} >By</Text>
-	                  		<Text style={styles.b2} >{item.teacher.name.fullName} </Text>
+	                  		<Text style={styles.b2} >{item.teacher.name.fullName}</Text>
 	                  </View>
 	                  {item.goods.price != 0  ? (
 		                  <View style={styles.priceContainer}>

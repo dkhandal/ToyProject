@@ -212,12 +212,12 @@ export default class LectureDetailBasic extends React.Component {
         headerTransparent:  true,
         headerLeft:  () => (
             <TouchableOpacity style={styles.iconLeftArrow} onPress={() => navigation.goBack()} >
-              <Icon name='arrow-left' size={24}  iconStyle={styles.icon77} color='#ffffff'/>
+              <Icon name='arrow-left' size={16}  style={styles.icon77}/>
             </TouchableOpacity>
         ),
         headerRight:  () => (
             <TouchableOpacity style={styles.iconRightSearch}>
-              <Icon name='ellipsis-v' size={24}  iconStyle={styles.iconactionsearch24Px} color='#ffffff'/>
+              <Icon name='ellipsis-v' size={16}  style={styles.iconactionsearch24Px}/>
             </TouchableOpacity>
         )
       }

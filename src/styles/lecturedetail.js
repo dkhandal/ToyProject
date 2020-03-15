@@ -11,11 +11,16 @@ container: {
 	  backgroundColor: "red"
 	},
 	iconLeftArrow: {
-    	marginLeft: 20
+    	marginLeft: 20,
+    	width: 24,
+    	height: 24,
+    	padding: 4
 	 },
 	 iconRightSearch: {
 	    alignItems: "flex-end",
-	    width: 120,
+	    width: 24,
+	    height: 24,
+	    padding: 4,
 	    marginRight: 20
 	},
 	h8PageTitle: {
@@ -31,14 +36,14 @@ container: {
 	  color: "#ffffff"
 	},
 	icon77:{
-	  width: 24,
-	  height: 24,
-	  backgroundColor: "#ffffff"
+	  width: 16,
+	  height: 16,
+	  color: "#ffffff"
 	},
 	iconactionsearch24Px: {
-	  width: 24,
-	  height: 24,
-	  backgroundColor: "#d1d9da"
+	  width: 16,
+	  height: 16,
+	  color: "#ffffff"
 	},
 	canvas: {
 		flex:1, width: null, height: null

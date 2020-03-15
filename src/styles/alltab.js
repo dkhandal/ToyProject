@@ -22,8 +22,8 @@ export default StyleSheet.create({
 	},
 	s2: {
 	  width: 200,
-	  // height: 48,
-	  fontFamily: "Roboto",
+	  height: 48,
+	  fontFamily: "Roboto-Bold",
 	  fontSize: 16,
 	  fontWeight: "bold",
 	  fontStyle: "normal",
@@ -32,7 +32,7 @@ export default StyleSheet.create({
 	  textAlign: "left",
 	  color: "#212121",
 	  marginLeft: 16,
-	  marginTop: 16
+	  marginTop: 13
 	},
 	btn1Button: {
 	  width: 60,
@@ -59,29 +59,42 @@ export default StyleSheet.create({
 	  width: 232,
 	  height: 130
 	},
-	b3: {
-	  // width: 62,
-	  // height: 19,
-	  fontFamily: "Roboto",
+	b3lession: {
+	  width: 60,
+	  height: 19,
+	  fontFamily: "Roboto-Regular",
 	  fontSize: 14,
 	  fontWeight: "normal",
 	  fontStyle: "normal",
-	  // lineHeight: 22,
+	  lineHeight: 22,
 	  letterSpacing: 0,
 	  textAlign: "left",
 	  color: "#818181",
 	  marginLeft: 16,
-	  // marginTop: 10,
-	  // marginBottom: 2
+	  marginTop: 8
+	},	
+	b3: {
+	  width: 62,
+	  height: 19,
+	  fontFamily: "Roboto-Regular",
+	  fontSize: 14,
+	  fontWeight: "normal",
+	  fontStyle: "normal",
+	  lineHeight: 22,
+	  letterSpacing: 0,
+	  textAlign: "left",
+	  color: "#818181",
+	  marginLeft: 16,
+	  marginTop: 10
 	},
 	eB3By: {
 	  // width: 14,
 	  // height: 19,
-	  fontFamily: "Roboto",
+	  fontFamily: "Roboto-Regular",
 	  fontSize: 14,
 	  fontWeight: "normal",
 	  fontStyle: "normal",
-	  // lineHeight: 22,
+	  lineHeight: 22,
 	  letterSpacing: 0,
 	  textAlign: "left",
 	  color: "#212121",
@@ -90,33 +103,33 @@ export default StyleSheet.create({
 	b2: {
 	  // width: 59,
 	  // height: 19,
-	  fontFamily: "Roboto",
+	  fontFamily: "Roboto-Medium",
 	  fontSize: 14,
 	  fontWeight: "500",
 	  fontStyle: "normal",
-	  // lineHeight: 22,
+	  lineHeight: 22,
 	  letterSpacing: 0,
 	  textAlign: "left",
 	  color: "#212121",
 	  marginLeft: 7
 	},
 	eB3: {
-	  // width: 30,
-	  // height: 19,
-	  fontFamily: "Roboto",
+	  width: 30,
+	  height: 19,
+	  fontFamily: "Roboto-Regular",
 	  fontSize: 14,
 	  fontWeight: "normal",
 	  fontStyle: "normal",
-	  lineHeight: 24,
+	  // lineHeight: 24,
 	  letterSpacing: 0,
 	  textAlign: "left",
 	  color: "#212121",
 	  marginRight: 7
 	},
 	eH5: {
-	  // width: 81,
-	  // height: 34,
-	  fontFamily: "Roboto",
+	  width: 81,
+	  height: 32,
+	  fontFamily: "Roboto-Bold",
 	  fontSize: 26,
 	  fontWeight: "bold",
 	  fontStyle: "normal",
@@ -126,13 +139,13 @@ export default StyleSheet.create({
 	  color: "#212121"
 	},
 	eB1: {
-	  // width: 48,
-	  // height: 21,
-	  fontFamily: "Roboto",
+	  width: 48,
+	  height: 21,
+	  fontFamily: "Roboto-Regular",
 	  fontSize: 16,
 	  fontWeight: "normal",
 	  fontStyle: "normal",
-	  lineHeight: 20,
+	  // lineHeight: 20,
 	  letterSpacing: 0,
 	  textAlign: "left",
 	  color: "#d1d1d1",
@@ -144,10 +157,11 @@ export default StyleSheet.create({
 	byContainer: {
 		flexDirection: 'row',
 		alignItems: 'center',
-		marginTop: 10,
-		marginBottom: 10
+		marginTop: 2,
+		marginBottom: 5
 	},
 	priceContainer: {
+		height: 34,
 		flexDirection: 'row',
 		alignItems: 'flex-end',
 		marginLeft: 16
@@ -155,7 +169,7 @@ export default StyleSheet.create({
 	ct: {
 	  // width: 42,
 	  // height: 13,
-	  fontFamily: "Roboto",
+	  fontFamily: "Roboto-Regular",
 	  fontSize: 10,
 	  fontWeight: "normal",
 	  fontStyle: "normal",
